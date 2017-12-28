@@ -1,0 +1,13 @@
+icon="C:\Users\St\Desktop\BmfontTools\pic\bf_baccarat_..png",%d,0,0,0 
+icon="C:\Users\St\Desktop\BmfontTools\pic\bf_baccarat_0.png",%d,0,0,0 
+icon="C:\Users\St\Desktop\BmfontTools\pic\bf_baccarat_1.png",%d,0,0,0 
+icon="C:\Users\St\Desktop\BmfontTools\pic\bf_baccarat_2.png",%d,0,0,0 
+icon="C:\Users\St\Desktop\BmfontTools\pic\bf_baccarat_3.png",%d,0,0,0 
+icon="C:\Users\St\Desktop\BmfontTools\pic\bf_baccarat_4.png",%d,0,0,0 
+icon="C:\Users\St\Desktop\BmfontTools\pic\bf_baccarat_5.png",%d,0,0,0 
+icon="C:\Users\St\Desktop\BmfontTools\pic\bf_baccarat_6.png",%d,0,0,0 
+icon="C:\Users\St\Desktop\BmfontTools\pic\bf_baccarat_7.png",%d,0,0,0 
+icon="C:\Users\St\Desktop\BmfontTools\pic\bf_baccarat_8.png",%d,0,0,0 
+icon="C:\Users\St\Desktop\BmfontTools\pic\bf_baccarat_9.png",%d,0,0,0 
+icon="C:\Users\St\Desktop\BmfontTools\pic\bf_baccarat_wan.png",%d,0,0,0 
+icon="C:\Users\St\Desktop\BmfontTools\pic\bf_baccarat_yi.png",%d,0,0,0 
