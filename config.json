@@ -1,4 +1,5 @@
 ﻿{ 
-    "BMFont_PATH": "",
-    "PublishName": "font.fnt"
+    "PublishName": "bm001.fnt",
+    "stringName" : "string.txt",
+    "configName" : "config.bmfc"
  }

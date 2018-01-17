@@ -4,6 +4,9 @@ import sys
 import codecs  
 #import chardet
 import shutil
+import json
+import subprocess
+import lib.syscmd
 
 def getUnicode(Line):
   originUTF = open("string.txt","rb")
@@ -32,10 +35,16 @@ def getFilePathAndWirteTofile(picPath):
     getUnicode(L)
 
 def callBmFont():
-      with open("config.json",'r') as load_f:
-      load_dict = json.load(load_f)
-      exePath = load_dict.BMFont_PATH,
-      os.system(exePath)
+    file=open(os.getcwd()+"/config.json",'r')
+    jObj= file.read()
+    jObj=jObj.decode("utf-8-sig")
+    pythonObj=json.loads(jObj)
+    exePath = os.getcwd() +"/BMFont/bmfont.exe"
+    outPutName = os.getcwd()+ "/archive/" + pythonObj["PublishName"]
+    stringName = os.getcwd() + "/" + pythonObj["stringName"]
+    configName = os.getcwd() + "/" + pythonObj["configName"]
+    strs = exePath + " -t " + stringName + " -c " + configName + " -o " +outPutName
+    lib.syscmd.exec_cmd(strs)
 
 path = os.getcwd()+ "/pic"
 getFilePathAndWirteTofile(path)
