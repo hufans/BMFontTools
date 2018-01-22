@@ -6,7 +6,7 @@ import json
 
 local_path = os.path.dirname(__file__)
 
-log_file_path = local_path+"/../../build_log.txt"
+log_file_path = local_path+"font_log.txt"
 logFile = open(log_file_path,'a+')
 
 def clear_log():
