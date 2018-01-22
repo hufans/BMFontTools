@@ -9,8 +9,9 @@ import subprocess
 import lib.syscmd
 
 def getUnicode(Line):
+  local = os.getcwd()
   originUTF = open("string.txt","rb")
-  configFile = open('config.bmfc', 'a')
+  configFile = open('config/config.bmfc', 'a')
   str = originUTF.read()
   #print chardet.detect(str)
   str=str.decode('utf-16')
@@ -24,6 +25,7 @@ def getUnicode(Line):
   configFile.close()
 
 def getFilePathAndWirteTofile(picPath):
+    os.chdir(os.getcwd()+"/config/") 
     fileNameOfconfig = "config.bmfc"
     shutil.copyfile("configModel.bmfc", fileNameOfconfig)
     L = []
@@ -32,17 +34,20 @@ def getFilePathAndWirteTofile(picPath):
         for file in files: 
           L.append("icon=\"" + root+"/"+file + '\"')
 
+    local = os.getcwd()
+    os.chdir(os.getcwd()+"/..")
     getUnicode(L)
+    
 
 def callBmFont():
-    file=open(os.getcwd()+"/config.json",'r')
+    file=open(os.getcwd()+"/config/config.json",'r')
     jObj= file.read()
     jObj=jObj.decode("utf-8-sig")
     pythonObj=json.loads(jObj)
     exePath = os.getcwd() +"/BMFont/bmfont.exe"
-    outPutName = os.getcwd()+ "/archive/" + pythonObj["PublishName"]
+    outPutName = pythonObj["PublishName"]
     stringName = os.getcwd() + "/" + pythonObj["stringName"]
-    configName = os.getcwd() + "/" + pythonObj["configName"]
+    configName = os.getcwd() + "/config/" + pythonObj["configName"]
     strs = exePath + " -t " + stringName + " -c " + configName + " -o " +outPutName
     lib.syscmd.exec_cmd(strs)
 
